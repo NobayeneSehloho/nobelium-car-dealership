@@ -26,13 +26,11 @@ public abstract class Automobile  {
 		
 	}
 
-
+	
 	public Automobile() {
 		super();
 	}
 
-	
-	
 	
 	public String getMake() {
 		return make;

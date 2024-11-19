@@ -18,9 +18,7 @@ public  class MotorsDealership  {
 		this.dealershipName = dealershipName;
 		this.dealershipAddress = dealershipAddress;
 		this.dealershipCity = dealershipCity;
-		
 	}
-	
 	
 	
 	public String getDealershipName() {
@@ -35,10 +33,12 @@ public  class MotorsDealership  {
 		return dealershipAddress;
 	}
 
+	
 	public void setDealershipAddress(String dealershipAddress) {
 		this.dealershipAddress = dealershipAddress;
 	}
 
+	
 	public String getDealershipCity() {
 		return dealershipCity;
 	}
@@ -56,12 +56,9 @@ public  class MotorsDealership  {
 	}
 
 
-	
-	
 	void addItem(Automobile item) {
 		inventory.add(item );
 		System.out.println(item.getMake() + " " + item.getModel() + " added to inventory.");
-		
 	}
 	
 	
@@ -74,8 +71,8 @@ public  class MotorsDealership  {
     
     void displayDealershipInventory() {
     	
+    	System.out.println(getDealershipName() + " Inventory: ");
     	for (Automobile item : inventory) {
-    		System.out.println("Our inventory :");
     		System.out.println(item);
     	}
     	
