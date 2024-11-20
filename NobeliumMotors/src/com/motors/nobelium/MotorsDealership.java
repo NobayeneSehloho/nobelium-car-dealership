@@ -1,6 +1,5 @@
 package com.motors.nobelium;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +11,10 @@ public  class MotorsDealership  {
 	private String dealershipCity;
 	
 	private List<Automobile> inventory = new ArrayList<>();
+	private List<SalesReps> salesPerson = new ArrayList<>();
+	//private List<ArrayList<Automobile>> salesData = new ArrayList<>(); // // Create a multi-dimensional ArrayList
 	
-
+	
 	public MotorsDealership(String dealershipName, String dealershipAddress, String dealershipCity) {
 		this.dealershipName = dealershipName;
 		this.dealershipAddress = dealershipAddress;
@@ -21,6 +22,15 @@ public  class MotorsDealership  {
 	}
 	
 	
+	public List<SalesReps> getSalesPerson() {
+		return salesPerson;
+	}
+
+
+	public void setSalesPerson(List<SalesReps> salesPerson) {
+		this.salesPerson = salesPerson;
+	}
+
 	public String getDealershipName() {
 		return dealershipName;
 	}
@@ -56,17 +66,30 @@ public  class MotorsDealership  {
 	}
 
 
+	
 	void addItem(Automobile item) {
 		inventory.add(item );
 		System.out.println(item.getMake() + " " + item.getModel() + " added to inventory.");
 	}
 	
 	
-    void removeItem(Automobile item) {
+    void sellItem(Automobile item, SalesReps employee) {
+    	
+    	employee.sellAutomobile(item);
+    	employee.setSalesCount(employee.getSalesCount() + 1);
     	inventory.remove(item );
-        System.out.println(item + " removed from inventory.");
+    	
+        System.out.println(item + " sold from inventory by " + employee.getEmployeeName());
 
     }
+    
+    
+    void addSalesEmployee(SalesReps employee) {
+    	
+    	salesPerson.add(employee);
+    	System.out.println(employee.getEmployeeName() + " added to Dealdership ");
+    }
+    
     
     
     void displayDealershipInventory() {
@@ -76,7 +99,15 @@ public  class MotorsDealership  {
     		System.out.println(item);
     	}
     	
-    	
+    }
+    
+    public void displaySalesData() {
+        System.out.println("Sales Data:");
+        for (SalesReps salesRep : salesPerson) {
+            System.out.println("Salesperson: " + salesRep.getEmployeeName());
+            System.out.println("Sold Cars: " + salesRep.getSales());
+            System.out.println();
+        }
     }
 
 	

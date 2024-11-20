@@ -13,6 +13,7 @@ public abstract class Automobile  {
     protected String model;
     protected int year;
     protected String color;
+    protected String salesRep;
     
     protected List<Car> carInventory = new ArrayList<>();
 	protected List<Bike> bikeInventory = new ArrayList<>();
@@ -26,12 +27,18 @@ public abstract class Automobile  {
 		
 	}
 
-	
+	public String getSalesRep() {
+		return salesRep;
+	}
+
+	public void setSalesRep(String salesRep) {
+		this.salesRep = salesRep;
+	}
+
 	public Automobile() {
 		super();
 	}
 
-	
 	public String getMake() {
 		return make;
 	}

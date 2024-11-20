@@ -17,7 +17,6 @@ public class Car extends Automobile implements Dealership {
 	}
 	
 	
-	
 	public int getSeatingCapacity() {
 		return seatingCapacity;
 	}
@@ -61,8 +60,9 @@ public class Car extends Automobile implements Dealership {
 
 	@Override
 	public void addAutomobile(Automobile automobile) {
-		// TODO Auto-generated method stub
 		
+	        //sales.add(automobile);
+	    
 	}
 
 

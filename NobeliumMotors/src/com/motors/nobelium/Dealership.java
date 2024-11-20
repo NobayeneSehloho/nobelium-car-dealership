@@ -1,5 +1,6 @@
 package com.motors.nobelium;
 
+
 import com.motors.nobelium.bikes.Bike;
 import com.motors.nobelium.cars.Car;
 
@@ -13,10 +14,7 @@ public interface Dealership {
     
     void displayInventory();
     
-    
     void addAutomobile(Automobile automobile);
     void removeAutomobile(Automobile automobile);
-    
-
     
 }
