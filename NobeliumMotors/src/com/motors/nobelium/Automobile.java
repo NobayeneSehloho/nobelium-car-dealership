@@ -27,6 +27,7 @@ public abstract class Automobile  {
 		
 	}
 
+	
 	public String getSalesRep() {
 		return salesRep;
 	}
@@ -86,6 +87,15 @@ public abstract class Automobile  {
 	public void setBikeInventory(List<Bike> bikeInventory) {
 		this.bikeInventory = bikeInventory;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Automobile [make=" + make + ", model=" + model + ", year=" + year + ", color=" + color + ", salesRep="
+				+ salesRep + ", carInventory=" + carInventory + ", bikeInventory=" + bikeInventory + "]";
+	}
+	
+	
 
 
 	

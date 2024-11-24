@@ -42,6 +42,10 @@ public class Main {
 		dealership.addItem(car[2]);
 		dealership.addItem(car[3]);
 		dealership.addItem(car[4]);
+		dealership.addItem(car[5]);
+		dealership.addItem(car[6]);
+		dealership.addItem(car[7]);
+		dealership.addItem(car[8]);
 	
 		System.out.println();
 		
@@ -58,9 +62,8 @@ public class Main {
 		System.out.println();
 		dealership.displayDealershipInventory();
 		
-		
-		System.out.println("Creating the employees below ");
-
+		System.out.println();
+		//System.out.println("Creating the employees below ");
 		SalesReps employee1 = new SalesReps("James Powell", "EMP1234", 0);
 		SalesReps employee2 = new SalesReps("Johan Lesley", "EMP2345", 0);
 		SalesReps employee3 = new SalesReps("Marianne Joules", "EMP3456", 0);
@@ -70,7 +73,7 @@ public class Main {
 		
 		System.out.println();
 		
-		System.out.println("Adding the employees below ");
+		System.out.println(" Adding the employees below ");
 		
 		dealership.addSalesEmployee(employee1);
 		dealership.addSalesEmployee(employee2);

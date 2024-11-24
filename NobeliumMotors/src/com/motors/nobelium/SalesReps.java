@@ -66,6 +66,15 @@ public class SalesReps {
         sales.add(automobile);
     
 	}
+
+
+	@Override
+	public String toString() {
+		return "SalesReps [employeeName=" + employeeName + ", employeeID=" + employeeID + ", salesCount=" + salesCount
+				+ ", sales=" + sales + "]";
+	}
+	
+	
 	
 	
 }

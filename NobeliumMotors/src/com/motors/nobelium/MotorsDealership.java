@@ -43,12 +43,10 @@ public  class MotorsDealership  {
 		return dealershipAddress;
 	}
 
-	
 	public void setDealershipAddress(String dealershipAddress) {
 		this.dealershipAddress = dealershipAddress;
 	}
 
-	
 	public String getDealershipCity() {
 		return dealershipCity;
 	}
@@ -101,6 +99,7 @@ public  class MotorsDealership  {
     	
     }
     
+    
     public void displaySalesData() {
         System.out.println("Sales Data:");
         for (SalesReps salesRep : salesPerson) {
@@ -109,6 +108,17 @@ public  class MotorsDealership  {
             System.out.println();
         }
     }
+
+
+	@Override
+	public String toString() {
+		return "MotorsDealership [dealershipName=" + dealershipName + ", dealershipAddress=" + dealershipAddress
+				+ ", dealershipCity=" + dealershipCity + ", inventory=" + inventory + ", salesPerson=" + salesPerson
+				+ "]";
+	}
+    
+    
+    
 
 	
 	
